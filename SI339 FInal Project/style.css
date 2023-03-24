@@ -1,0 +1,136 @@
+/* Basic styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  header {
+    background-color: rgb(43, 145, 201);
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #fff;
+    margin: 0;
+  }
+  
+  nav {
+    background-color: rgb(0, 0, 0);
+  }
+  
+  nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  nav li {
+    text-align: center;
+  }
+  
+  nav a {
+    color: #fff;
+    display: block;
+    padding: 1rem;
+    text-decoration: none;
+  }
+  
+  nav a.active {
+    background-color: rgb(144, 139, 139);
+  }
+  
+  .skip-link {
+    background-color: #444;
+    color: #fff;
+    display: inline-block;
+    padding: 0.5rem;
+    position: absolute;
+    text-decoration: none;
+    top: -40px;
+  }
+  
+  .skip-link:focus {
+    top: 10px;
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1rem;
+    text-align: center;
+  }
+  
+  /* Mobile-first design */
+  
+  /* Flexbox layout for breeds.html */
+  main#breeds-main section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  main#breeds-main div {
+    text-align: center;
+  }
+  
+  /* Grid layout for gallery.html */
+  main#gallery-main section {
+    display: grid;
+    gap: 1rem;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  }
+  
+  /* Media queries for tablet and larger screens */
+  @media (min-width: 768px) {
+    nav ul {
+      display: flex;
+      justify-content: center;
+    }
+  
+    nav li {
+      flex: 1;
+    }
+  
+    /* Flexbox layout for breeds.html */
+    main#breeds-main section {
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+  
+    main#breeds-main div {
+      flex: 1;
+    }
+  
+    /* Grid layout for gallery.html */
+    main#gallery-main section {
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
+  }
+  
+  @media (min-width: 1200px) {
+    nav ul {
+      justify-content: space-between;
+    }
+  
+    /* Grid layout for gallery.html */
+    main#gallery-main section {
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    }
+  }
+  
+  /* Reduced motion media query */
+  @media (prefers-reduced-motion: reduce) {
+    /* Add reduced motion CSS rules here if you have animations */
+  }
+  
